@@ -76,7 +76,7 @@ namespace Recipe.Data
                 recipeIngrQuery = recipeIngrFstQuery + encodedName + recipeIngrSndQuery;
 
                 //get data for links and instructions of recipe
-                using(recipeInstr = UnityWebRequest.Get("http://192.168.178.34:7200/repositories/substitute-app?query=" + Uri.EscapeDataString(recipeInstrQuery)))
+                using(recipeInstr = UnityWebRequest.Get("http://localhost:7200/repositories/substitute-app?query=" + Uri.EscapeDataString(recipeInstrQuery)))
                 {
                     recipeInstr.SetRequestHeader("Accept", "application/sparql-results+json");
                     yield return recipeInstr.SendWebRequest();
@@ -108,13 +108,13 @@ namespace Recipe.Data
                 }
 
                 //get all food products of substitute ontology that can be used as substitute for ingredients
-                using(allSubsReq = UnityWebRequest.Get("http://192.168.178.34:7200/repositories/substitute-app?query=" + Uri.EscapeDataString(allSubs)))
+                using(allSubsReq = UnityWebRequest.Get("http://localhost:7200/repositories/substitute-app?query=" + Uri.EscapeDataString(allSubs)))
                 {
                     allSubsReq.SetRequestHeader("Accept", "application/sparql-results+json");
                     yield return allSubsReq.SendWebRequest();
 
                     //get all ingredients of recipe
-                    using(recipeIngrReq = UnityWebRequest.Get("http://192.168.178.34:7200/repositories/substitute-app?query=" + Uri.EscapeDataString(recipeIngrQuery)))
+                    using(recipeIngrReq = UnityWebRequest.Get("http://localhost:7200/repositories/substitute-app?query=" + Uri.EscapeDataString(recipeIngrQuery)))
                     {
                         recipeIngrReq.SetRequestHeader("Accept", "application/sparql-results+json");
                         yield return recipeIngrReq.SendWebRequest();

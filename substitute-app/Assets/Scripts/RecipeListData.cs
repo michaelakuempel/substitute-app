@@ -42,7 +42,7 @@ namespace Recipe.List.Data
             string categoryNameLabel = StaticVars.selectedCategoryLabel;
             recipeListQuery = recipeListFstQuery + recipeName + recipeListSndQuery;
 
-            using(recipeReq = UnityWebRequest.Get("http://192.168.178.34:7200/repositories/substitute-app?query=" + Uri.EscapeDataString(recipeListQuery)))
+            using(recipeReq = UnityWebRequest.Get("http://localhost:7200/repositories/substitute-app?query=" + Uri.EscapeDataString(recipeListQuery)))
             {
                 recipeReq.SetRequestHeader("Accept", "application/sparql-results+json");
                 yield return recipeReq.SendWebRequest();

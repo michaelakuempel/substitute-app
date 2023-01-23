@@ -225,7 +225,7 @@ namespace Recipe.UIData
                     subsQuery = subsFstQuery + foundSub + subsSndQuery;
                 }
                 subsQuery = subsFstQuery + foundSub + subsTrdQuery;
-                subsReq = UnityWebRequest.Get("http://192.168.178.34:7200/repositories/substitute-app?query=" + Uri.EscapeDataString(subsQuery));
+                subsReq = UnityWebRequest.Get("http://localhost:7200/repositories/substitute-app?query=" + Uri.EscapeDataString(subsQuery));
 
                 subsReq.SetRequestHeader("Accept", "application/sparql-results+json");
                 yield return subsReq.SendWebRequest();

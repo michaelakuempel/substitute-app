@@ -31,7 +31,7 @@ namespace Search.Data
        */
         public IEnumerator GetSearchData()
         {
-            using(allRecipesReq = UnityWebRequest.Get("http://192.168.178.34:7200/repositories/substitute-app?query=" + Uri.EscapeDataString(allRecipesListQuery)))
+            using(allRecipesReq = UnityWebRequest.Get("http://localhost:7200/repositories/substitute-app?query=" + Uri.EscapeDataString(allRecipesListQuery)))
             {
                 allRecipesReq.SetRequestHeader("Accept", "application/sparql-results+json");
                 yield return allRecipesReq.SendWebRequest();
