@@ -15,7 +15,7 @@ namespace Search.Data
 
     public class SearchData: MonoBehaviour
     {
-        private string allRecipesListQuery = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX recipe: <http://purl.org/NonFoodKG/1-mio-recipes#>SELECT DISTINCT ?recipe ?recipeLabel WHERE{ ?recipe rdfs:subClassOf*  recipe:Recipe.?recipe rdfs:label ?recipeLabel  filter(langMatches(lang(?recipeLabel),'en')).} ORDER BY ASC (?recipeLabel) #LIMIT 2000";  private JSONNode jsonAllRecipes;
+        private string allRecipesListQuery = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX recipe: <http://purl.org/NonFoodKG/1-mio-recipes#>SELECT DISTINCT ?recipe ?recipeLabel WHERE{ ?recipe rdfs:subClassOf*  recipe:Recipe.?recipe rdfs:label ?recipeLabel  filter(langMatches(lang(?recipeLabel),'en')).} ORDER BY ASC (?recipeLabel) LIMIT 500";  private JSONNode jsonAllRecipes;
         private UnityWebRequest allRecipesReq;
         string rawAllRecipes;
         private static SearchData instance;
