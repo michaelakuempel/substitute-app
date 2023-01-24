@@ -1,5 +1,5 @@
 Anleitung zum Starten der Smartphone-Anwendung auf dem Smartphone durch Generierung einer .apk-Datei
-- Es handelt sich um eine Rezeptapp auf Basis von zwei Ontologien: eine Rezeptontologie (von Andreas Keil) und eine Ersatzprodukt-Ontologie (von mir) -
+- Es handelt sich um eine Rezeptapp auf Basis von zwei Ontologien: eine Rezeptontologie (von Andreas Keil) und eine Ersatzprodukt-Ontologie (von mir)
 
 1. GraphDB starten
 2. In ein Repository die Ersatzprodukt-Ontologgie (substitutes.owl) und Rezeptontologie (recipe_on_with_mealtypes.owl) aus dem Ordner "Ontologien" hinzufügen (Upload RDF files), baseURI (http://purl.org/NonFoodKG/substitutes# und http://purl.org/NonFoodKG/1-mio-recipes#) für Ontologien angeben und importieren
