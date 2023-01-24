@@ -3,7 +3,7 @@ Anleitung zum Starten der Smartphone-Anwendung auf dem Smartphone durch Generier
 
 1. GraphDB starten
 2. In ein Repository die Ersatzprodukt-Ontologgie (substitutes.owl) und Rezeptontologie (recipe_on_with_mealtypes.owl) aus dem Ordner "Ontologien" hinzufügen (Upload RDF files), baseURI (http://purl.org/NonFoodKG/substitutes# und http://purl.org/NonFoodKG/1-mio-recipes#) für Ontologien angeben und importieren
-3. Unity-Projekt über Unity Hub öffnen
+3. Unity-Projekt über Unity Hub öffnen (app/unity-app)
 4. Alle Szenen in "Scenes In Build" hinzufügen, als Plattform "Android" auswählen (Switch Plattform), Szenen in korrekter Reihenfolge zu "Scenes In Build" hinzufügen (0 CategoryListScreen, 1 RecipeListScreen, 2 RecipeScreen)
 5. Wenn Android noch nicht installiert, dann fehlende Androidmodule installieren und Unity neu starten
 6. In Unity in der "Game View" sicherstellen, dass die Auflösung korrekt eingestellt ist (1080x2400) und in diesem Zuge die UI-Elemente korrekt angezeigt werden
